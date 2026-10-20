@@ -44,6 +44,8 @@
         local_rom_ids = ["rom_pre", "rom_transition", "rom_post"],
         start_time = 20.0,
         end_time = 80.0,
+        pre_to_transition_time = 35.0,
+        transition_to_post_time = 60.0,
         run_tag = "state_switch",
     )
     @test dict_to_switched_rom(switched_rom_to_dict(switchcfg)).end_time == 80.0
