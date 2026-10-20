@@ -1,0 +1,6 @@
+n = [1024]
+cfl = [0.67]
+stretch = [1, 1.2, 1.4, 1.6]
+nsnapshot = [100]
+viscosity = [0.0004]
+

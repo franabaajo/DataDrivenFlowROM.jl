@@ -1,0 +1,4 @@
+interval,time_range,n_points,mean_rel_state_error,median_rel_state_error,max_rel_state_error,final_rel_state_error,rel_ke_rmse,rel_lz_rmse,rel_nu_bottom_rmse
+full run,10.000--300.000,871,0.17095,0.17574,0.48122,0.19144,0.14959,0.08318,0.19827
+training-window comparison,10.000--150.000,421,0.15288,0.13985,0.48122,0.23008,0.11093,0.08538,0.16770
+post-training prediction,150.333--300.000,450,0.18786,0.19008,0.26538,0.19144,0.18173,0.08128,0.22404

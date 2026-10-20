@@ -1,0 +1,13 @@
+/output/
+/scratch/
+/Manifest.toml
+*.jld2
+*.h5
+*.hdf5
+*.log
+*.out
+*.jl.cov
+*.jl.*.cov
+.DS_Store
+Thumbs.db
+

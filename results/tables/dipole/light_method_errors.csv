@@ -1,0 +1,5 @@
+label,run_id,rank,actual_energy_retained,mean_rel_state_error,max_rel_state_error,final_rel_state_error
+Exact OpInf, eta=0.95,rom_from_e592f3a8_exactopinf_bglob_e0p95_d9547ec6,13,0.95064443,0.43372,0.75130,0.43960
+Exact OpInf, eta=0.99,rom_from_e592f3a8_exactopinf_bglob_e0p99_87d75a35,22,0.99071429,0.49750,1.06714,1.06640
+Intrusive Galerkin, eta=0.99,rom_from_e592f3a8_intrusive_bglob_e0p99_tagdirect_intrusive_e12a4370,22,0.99071429,0.49750,1.06714,1.06640
+Trajectory OpInf, eta=0.99 request,rom_from_e592f3a8_trajopinf_bglob_e0p99_lam0p01_tagtrajopinf_e0p99_2b364ac5,8,0.86662890,0.50623,0.73208,0.47664

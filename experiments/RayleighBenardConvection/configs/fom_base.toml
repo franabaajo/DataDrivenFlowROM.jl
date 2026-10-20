@@ -1,0 +1,22 @@
+viscosity = 0.00025
+conductivity = 0.00025
+gravity = 1.0
+gdir = 2
+dodissipation = true
+
+nx = 1024
+ny = 512
+xlims = [0.0, 2.0]
+ylims = [0.0, 1.0]
+stretch_x = 1
+stretch_y = 1
+
+temp_hot = 1.0
+temp_cold = 0.0
+initial_temperature_profile = "uniform"
+perturbation_amplitude = 0.01
+perturbation_wavenumber = 20.0
+
+tsim = 20.0
+cfl = 0.9
+nsnapshot = 200

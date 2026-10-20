@@ -1,0 +1,23 @@
+npod = 20
+lambda = 0.01 # Not used for exact OpInf
+safety = 0.03
+growthfac = 1.05
+energy_fraction = 0.99 # Not used currently.
+use_intrusive_rom = false
+
+# Exact operator inference:
+use_exact_opinf = true
+exact_opinf_force_explicit_euler = true
+fallback_to_standard_opinf = true
+
+# POD basis construction uses all available snapshots.
+
+# Space-local POD:
+basis_mode = "space_local"
+basis_local_strategy = "S1"            # fixed total rank (=npod), allocated across blocks by pooled singular values
+basis_partition_method = "uniform_x"   # "uniform_x", "uniform_xy", "manual_x", "manual_xy"
+basis_partition_nx = 2                 # number of x-blocks
+basis_partition_ny = 1                 # only used for *_xy methods
+basis_local_energy_fraction = 0.99     # only used for S3 (kept here for completeness/signature)
+basis_space_local_sparse = true
+

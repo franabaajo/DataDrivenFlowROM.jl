@@ -1,0 +1,5 @@
+label,run_id,local_ranks,rmax,runtime_seconds,advance_runtime_seconds,setup_online_seconds,mean_rel_state_error,median_rel_state_error,max_rel_state_error,final_rel_state_error,rel_ke_rmse,rel_lz_rmse,rel_nu_bottom_rmse,rel_nu_top_rmse,active_counts,switch_times
+eta=0.9,rom_from_c5e2b71f_switched_lz_ts10p0_te150p0_tagauto_lz_aligned_transition_10_150_e0p90_212f65d9,15/4/18,18,8.033,1.24,9.738,0.71502,0.61384,2.19661,0.77985,3.40696,0.40871,0.63178,0.44837,478/98/358,81.75/96.45
+eta=0.95,rom_from_c5e2b71f_switched_lz_ts10p0_te150p0_tagauto_lz_aligned_transition_10_150_e0p95_f9a9a6a3,29/8/30,30,15.096,6.426,16.408,0.56716,0.43679,1.55274,0.19899,2.61146,0.3728,0.48079,0.42833,478/98/358,81.75/96.45
+eta=0.97,rom_from_c5e2b71f_switched_lz_ts10p0_te150p0_tagauto_lz_aligned_transition_10_150_e0p97_efc8da04,41/12/42,42,34.885,22.791,36.634,0.64769,0.63808,1.43229,0.37459,1.80481,0.57486,0.62749,0.57211,478/98/358,81.75/96.45
+eta=0.99,rom_from_c5e2b71f_switched_lz_ts10p0_te150p0_tagauto_lz_aligned_transition_10_150_6ff90faa,72/22/73,73,184.656,162.2,187.029,0.16034,0.15546,0.3905,0.19329,0.11116,0.07033,0.17164,0.15304,478/98/358,81.75/96.45

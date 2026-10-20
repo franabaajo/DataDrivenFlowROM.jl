@@ -1,0 +1,26 @@
+## Global basis rank selection
+# rank_selection = "npod"
+rank_selection = "energy_fraction"
+npod = 20 # Used when rank_selection = "npod"
+energy_fraction = 0.95 # Used when rank_selection = "energy_fraction"
+
+lambda = 0.01 # Only used for trajectory-based OpInf
+safety = 0.03
+growthfac = 1.05
+use_intrusive_rom = false
+# If true, build the ROM by intrusive projection of the FOM RHS at rank-ensuring states.
+use_exact_opinf = true
+# Force explicit Euler one-step training for exact OpInf guarantees.
+exact_opinf_force_explicit_euler = true
+fallback_to_standard_opinf = true
+
+# POD basis construction currently uses all available snapshots.
+
+# Space-local POD (optional):
+# basis_mode = "space_local"
+# basis_local_strategy = "S1"            # "S3" uses per-block energy, "S1" keeps total rank fixed (=npod)
+# basis_local_energy_fraction = 0.99     # η_loc for S3
+# basis_partition_method = "uniform_x"   # "uniform_x", "uniform_xy", "manual_x", "manual_xy"
+# basis_partition_nx = 4                 # number of x-blocks (C = nx for uniform_x)
+# basis_partition_ny = 1                 # number of y-blocks (only used for uniform_xy)
+# basis_space_local_sparse = true

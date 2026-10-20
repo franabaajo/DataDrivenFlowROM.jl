@@ -1,0 +1,23 @@
+npod = 20
+# Rank selection for the *global* POD basis:
+# - "npod": fixed rank `npod`
+# - "energy_fraction": choose smallest rank capturing `energy_fraction`
+rank_selection = "npod"
+lambda = 0.01
+safety = 0.03
+growthfac = 1.05
+energy_fraction = 0.99
+use_intrusive_rom = true
+use_exact_opinf = false
+exact_opinf_force_explicit_euler = true
+fallback_to_standard_opinf = true
+include_constant_term = true
+
+# Space-local POD (optional):
+# basis_mode = "space_local"
+# basis_local_strategy = "S3"
+# basis_local_energy_fraction = 0.99
+# basis_partition_method = "uniform_x"
+# basis_partition_nx = 2
+# basis_partition_ny = 1
+# basis_space_local_sparse = true

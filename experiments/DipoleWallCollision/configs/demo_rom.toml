@@ -1,0 +1,11 @@
+rank_selection = "npod"
+npod = 6
+energy_fraction = 0.95
+lambda = 0.01
+safety = 0.03
+growthfac = 1.05
+use_intrusive_rom = false
+use_exact_opinf = true
+exact_opinf_force_explicit_euler = true
+fallback_to_standard_opinf = true
+

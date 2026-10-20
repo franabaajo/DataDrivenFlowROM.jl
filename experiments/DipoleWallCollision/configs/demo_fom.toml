@@ -1,0 +1,15 @@
+# Small CPU-friendly smoke test. Use fom_base.toml for thesis-scale settings.
+viscosity = 0.0004
+r0 = 0.1
+p1 = [0.0, 0.1]
+p2 = [0.0, -0.1]
+initialenergy = 2.0
+
+n = 64
+stretch = 1.2
+lims = [-1.0, 1.0]
+
+tsim = 0.2
+cfl = 0.67
+nsnapshot = 24
+

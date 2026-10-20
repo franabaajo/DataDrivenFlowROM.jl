@@ -1,0 +1,29 @@
+# Space-local POD ROM config for DipoleWallCollision
+
+# Target total ROM dimension (S1 allocates these across blocks)
+npod = 20
+
+# Only used for trajectory-based OpInf (kept for signature completeness)
+lambda = 0.01
+safety = 0.03
+growthfac = 1.05
+
+use_intrusive_rom = false
+
+# Exact operator inference (recommended default for this workflow)
+use_exact_opinf = true
+exact_opinf_force_explicit_euler = true
+fallback_to_standard_opinf = true
+
+# (Global POD rank selection fields are ignored in space-local mode)
+rank_selection = "npod"
+energy_fraction = 0.99
+
+# Space-local POD:
+basis_mode = "space_local"
+basis_local_strategy = "S1"            # fixed total rank (=npod), allocated across blocks by pooled singular values
+basis_partition_method = "uniform_x"   # split domain into nx x-blocks
+basis_partition_nx = 4
+basis_partition_ny = 1
+basis_local_energy_fraction = 0.99      # only used for S3
+basis_space_local_sparse = true

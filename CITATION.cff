@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: DataDrivenFlowROM.jl
+message: If you use this research software, please cite the accompanying bachelor thesis.
+type: software
+authors:
+  - given-names: Francisco
+    family-names: Abajo Lis
+repository-code: https://github.com/franabaajo/DataDrivenFlowROM.jl
+license: MIT
+version: 1.0.0
+date-released: 2026-07-12
+

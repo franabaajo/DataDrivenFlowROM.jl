@@ -1,0 +1,13 @@
+viscosity = 0.0004
+r0 = 0.1
+p1 = [0.0, 0.1]
+p2 = [0.0, -0.1]
+initialenergy = 2.0
+
+n = 1536
+stretch = 1.6 # Matches fom_n1536_cfl0p67_st1p6_ns50_nu0p0004_91ad3df6
+lims = [-1.0, 1.0]
+
+tsim = 1.0
+cfl = 0.67
+nsnapshot = 50
