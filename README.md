@@ -7,22 +7,65 @@
 Data-driven reduced-order modelling of two-dimensional incompressible turbulent
 flows in Julia.
 
-This project implements and evaluates Proper Orthogonal Decomposition (POD),
-trajectory-based Operator Inference, exact Operator Inference, and intrusive
-Galerkin projection on two challenging flow problems:
+This repository accompanies my Bachelor End Project in Applied Mathematics and
+Applied Physics at Eindhoven University of Technology. It investigates whether
+expensive high-fidelity flow simulations can be compressed into fast,
+interpretable dynamical systems without explicitly assembling the full-order
+polynomial operators. The central comparison is between trajectory-based
+Operator Inference, exact Operator Inference, and intrusive Galerkin projection,
+all using reduced spaces constructed with Proper Orthogonal Decomposition (POD).
+
+The methods are evaluated on two challenging flow problems:
 
 - collision of a vortex dipole with a no-slip wall at `Re = 2500`;
 - Rayleigh-Benard convection at `Ra = 1.6e7`, including a reversal of the
   large-scale circulation.
 
-It was developed for my combined Applied Mathematics and Applied Physics
-Bachelor End Project at Eindhoven University of Technology. Full-order
-simulations use the MIT-licensed
+Full-order data are generated with the MIT-licensed
 [IncompressibleNavierStokes.jl](https://github.com/agdestein/IncompressibleNavierStokes.jl)
-solver. The ROM algorithms, experiment automation, diagnostics, analysis, and
-case studies in this repository are my contribution.
+solver on an energy-conserving staggered finite-volume grid. The ROM algorithms,
+experiment automation, diagnostics, analysis, and case studies in this
+repository are my contribution.
+
+The main finding is that exact Operator Inference recovers the corresponding
+intrusive reduced operators to floating-point accuracy in both cases. The
+remaining trajectory error is therefore dominated by the reduced space, POD
+truncation, and coverage of the relevant flow regimes—not by identification of
+the reduced operators. A global POD basis captures the energetic dipole dynamics
+but struggles with localized near-wall vorticity, while the circulation reversal
+requires scheduled local models for the pre-reversal, transition, and
+post-reversal regimes.
 
 ![Rayleigh-Benard circulation reversal](results/figures/rayleigh_fom_reversal_snapshots.png)
+
+## What is Operator Inference?
+
+Operator Inference (OpInf) is a non-intrusive, physics-structured model-reduction
+method introduced by Benjamin Peherstorfer and Karen Willcox in
+[Data-driven operator inference for nonintrusive projection-based model reduction](https://doi.org/10.1016/j.cma.2016.03.025)
+(2016). POD first represents a high-dimensional flow state using a small vector
+of reduced coordinates, `a(t)`. OpInf then learns the coefficients of a reduced
+dynamical system directly from state and time-derivative data. For the flows in
+this project, the known Navier–Stokes structure leads to an affine-quadratic
+model,
+
+```text
+da/dt = c + L*a + Q*(a ⊗ a),
+```
+
+so training becomes a linear least-squares problem for the constant, linear,
+and quadratic operators. Unlike an unconstrained black-box predictor, OpInf
+fixes the algebraic form from the governing physics and learns only its reduced
+coefficients; unlike intrusive Galerkin projection, it does not require direct
+access to assembled full-order operators.
+
+The exact variant studied here follows Henrik Rosenberger, Benjamin Sanderse,
+and Giovanni Stabile,
+[Exact operator inference with minimal data](https://doi.org/10.48550/arXiv.2506.01244).
+It constructs rank-ensuring reduced states and queries the full-order solver for
+one step from each state. When the resulting regression system has full rank,
+the intrusive Galerkin operators can be recovered to numerical round-off with a
+minimal set of purpose-built samples.
 
 ## Highlights
 
