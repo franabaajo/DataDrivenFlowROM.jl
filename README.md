@@ -4,6 +4,10 @@
 [![Julia 1.10](https://img.shields.io/badge/Julia-1.10%2B-9558B2.svg)](https://julialang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+> **New to reduced-order modelling?** Read the
+> [non-technical project overview](docs/nontechnical_overview.md) for the
+> problem, why it matters, what I built, and the main results.
+
 Data-driven reduced-order modelling of two-dimensional incompressible turbulent
 flows in Julia.
 
