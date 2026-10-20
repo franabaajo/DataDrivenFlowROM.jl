@@ -6,7 +6,7 @@
 
 > **New to reduced-order modelling?** Read the
 > [non-technical project overview](docs/nontechnical_overview.md) for the
-> problem, why it matters, what I built, and the main results.
+> problem, why it matters, what I built, and the skills I developed.
 
 Data-driven reduced-order modelling of two-dimensional incompressible turbulent
 flows in Julia.
